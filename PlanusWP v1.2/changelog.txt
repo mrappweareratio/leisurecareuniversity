@@ -1,0 +1,41 @@
+PlanusWP 1.2
+Added color options for content of each section
+Fixed some small typo on html
+Added setting for brand color
+Changed Testimonial slider arrows to gray
+Added second level for inner pages menu
+Added background meta field on Edit Page screen for those pages which are displayed on front page.
+Added option to create new front page sections.
+Moved some inline styles dynamic.css file
+Fixed portfolio filters to accept subcategories and posts into multiple categories.
+Created dropdown on main menu
+Fixed logo and menu alignement
+Fixed Pretty Columns icon color issue
+Add options for Pretty Columns colors (Service columns)
+Added shortcodes: tabs, toggle
+Created Tinymce button for all shortcodes
+Removed blank target from "view more" portfolio button
+Integrated Google Fonts
+Updated Option Tree to version 2.4.2
+Fixed a top menu bug
+Added options for custom colors on Portfolio items 
+Added option for custom link on contact button (Welcome section)
+Added custom CSS field.
+
+
+PlanusWP 1.1
+Added settings for Contact button from welcome screen. You can remove it or change the text from it.
+Translation ready
+Custom background for each home section
+New option to add extra links to home page menu.
+New section available: Map Section
+New shortcode for Google Maps
+Posibility to remove the section title from menu
+
+
+PlanusWP 1.0.2
+Fixed html tags issue on excerpts inside Blog and Portfolio thumbnails
+
+PlanusWP 1.0.1
+Fixed unclosed html tag for Social Icons
+Replaced top menu items border with shadow
