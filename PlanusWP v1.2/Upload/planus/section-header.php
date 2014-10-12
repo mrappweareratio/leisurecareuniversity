@@ -7,7 +7,7 @@
 				<?php if ( function_exists( 'ot_get_option' ) &&  ot_get_option( 'welcome_logo' ) != '' ) {
 					$welcome_logo = ot_get_option( 'welcome_logo' ); ?>
 					<figure class="round-outline">
-						<img class="round-photo" src="<?php echo $welcome_logo ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
+						<img src="<?php echo $welcome_logo ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
 					</figure>
 				<?php } ?>
 				</div>
