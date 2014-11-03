@@ -53,25 +53,22 @@ query_posts($args);
 
 			<li class="portfolio-mix col-md-3 <?php echo $slug ?>">
 				<figure class="portfolio-item">
-				<?php
-				if ( has_post_thumbnail() ) {
-					// echo '<a href="' . $permalink . '" >';
-				}
-				?>
-						<?php if ( has_post_thumbnail() ) {
-							the_post_thumbnail('post-thumbnail', array('class' => 'img-responsive'));
-						} ?>
+				<a href="#">
+						<?php 
+						if ( has_post_thumbnail() ) {
+							the_post_thumbnail('leadership-thumbnail', array('class' => 'img-responsive'));
+						} 
+						?>
 						<div class="caption-bg"></div>
 						<h3><?php echo $title; ?></h3>
 						<p class="portfolio-item-description">
 							<?php echo strip_tags($desc); ?>
 						</p>
-				<?php
-				if ( has_post_thumbnail() ) {
-					// echo '/<a>';
-				}
-				?>
-				</figure>
+				</a>
+				<div class="portfolio-item-sub-info">
+					<p><?php echo $title; ?></p>					
+				</div>
+				</figure>							
 			</li>
 		<?php endwhile; endif; ?>
 		</ul>

@@ -19,6 +19,7 @@ function planuswp_setup() {
     set_post_thumbnail_size( 260, 320, true ); // Normal post thumbnails
     add_image_size( 'excerpt-thumbnail', 750, 280, true ); // The image size for the first image in each post
     add_image_size( 'portfolio-thumbnail', 750, 440, true ); // The image size for the first image in each post
+    add_image_size( 'leadership-thumbnail', 300, 370, true ); // The image size for the leadership tile area
     
 
     // Image sizes

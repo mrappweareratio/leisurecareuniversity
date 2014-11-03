@@ -84,6 +84,36 @@ function portfolio_meta_boxes() {
     )
   );
   ot_register_meta_box( $upload_portfolio );
+  
+  $leader_fields = array(
+  		'id'        => 'leadership_details',
+  		'title'     => 'Leadership Details',
+  		'desc'      => '',
+  		'pages'     => array( 'portfolio' ),
+  		'context'   => 'normal',
+  		'priority'  => 'high',
+  		'fields'    => array(  				
+  				array(
+  						'id'          => 'leader_name',
+  						'label'       => 'Name',
+  						'desc'        => 'Please add here the name for your leader. (e.g. John Doe)',
+  						'std'         => '',
+  						'type'        => 'text',
+  						'class'       => '',
+  						'choices'     => array()
+  				),
+  				array(
+  						'id'          => 'leader_title',
+  						'label'       => 'Title',
+  						'desc'        => 'Add the title (e.g. CEO)',
+  						'std'         => '',
+  						'type'        => 'text',
+  						'class'       => '',
+  						'choices'     => array()
+  				)
+  		)
+  );
+  ot_register_meta_box( $leader_fields );
 }
 add_action( 'admin_init', 'portfolio_meta_boxes' );
 
