@@ -29,7 +29,7 @@ function portfolio_register() {
 		'capability_type'    => 'post',  
 		'hierarchical'       => false,  
 		'rewrite'            => true,  
-		'supports'           => array('title', 'editor', 'thumbnail')  
+		'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields')  
 	);  
    
 	register_post_type( 'portfolio' , $args );  
