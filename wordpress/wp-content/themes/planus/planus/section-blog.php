@@ -22,6 +22,9 @@ query_posts($args);
 			$title = str_ireplace('"', '', trim(get_the_title()));
 			$permalink = get_permalink( $id );
 			$desc = string_limit_words(get_the_excerpt(), 20);
+			if ( function_exists( 'ot_get_option' ) ) {				
+				$home_section_excerpt = get_post_meta( $post->ID, 'home_section_excerpt', true );
+			}
 		?>
 
 			<li class="col-md-3">
@@ -34,7 +37,7 @@ query_posts($args);
 						} ?>
 						<div class="caption-bg"></div>
 						<h3><?php echo $title?></h3>
-						<p class="blog-item-description"><?php echo strip_tags($desc); ?></p>
+						<p class="blog-item-description"><?php echo strip_tags($home_section_excerpt); ?></p>
 					</a>
 				</figure>
 			</li>

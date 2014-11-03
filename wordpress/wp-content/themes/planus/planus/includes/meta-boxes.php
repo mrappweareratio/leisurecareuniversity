@@ -162,4 +162,29 @@ function page_meta_boxes() {
 }
 add_action( 'admin_init', 'page_meta_boxes' );
 
+function custom_post_meta_boxes() {
+
+	$args = array(
+			'id'        => 'post_home_section',
+			'title'     => 'Home Section Options',
+			'desc'      => '',
+			'pages'     => array( 'post' ),
+			'context'   => 'normal',
+			'priority'  => 'high',
+			'fields'    => array(
+					array(
+							'id'          => 'home_section_excerpt',
+							'label'       => 'Excerpt',
+							'desc'        => 'Please add the excerpt for the home section tile',
+							'std'         => '',
+							'type'        => 'text',
+							'class'       => '',
+							'choices'     => array()
+					)			
+			)
+	);
+	ot_register_meta_box( $args );	
+}
+add_action( 'admin_init', 'custom_post_meta_boxes' );
+
 ?>
