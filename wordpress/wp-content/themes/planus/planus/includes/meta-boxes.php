@@ -175,7 +175,7 @@ function custom_post_meta_boxes() {
 					array(
 							'id'          => 'home_section_excerpt',
 							'label'       => 'Excerpt',
-							'desc'        => 'Please add the excerpt for the home section tile',
+							'desc'        => 'Please add the custom excerpt (approx 30 words)',
 							'std'         => '',
 							'type'        => 'text',
 							'class'       => '',

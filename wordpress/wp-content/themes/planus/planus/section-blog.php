@@ -24,6 +24,9 @@ query_posts($args);
 			$desc = string_limit_words(get_the_excerpt(), 20);
 			if ( function_exists( 'ot_get_option' ) ) {				
 				$home_section_excerpt = get_post_meta( $post->ID, 'home_section_excerpt', true );
+				$home_section_excerpt = string_limit_words($home_section_excerpt, 30);
+			}else{
+				$home_section_excerpt = $desc;
 			}
 		?>
 
