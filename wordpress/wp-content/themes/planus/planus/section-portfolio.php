@@ -32,7 +32,8 @@ query_posts($args);
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<?php
 			$title = str_ireplace('"', '', trim(get_the_title()));
-			$desc = string_limit_words(get_the_content(), 25);
+			$desc = string_limit_words(get_the_content(), 50);
+			//$desc = get_the_content();			
 			$terms = get_the_terms($post->ID, 'portfoliocats');
 			$permalink = get_permalink( $id );
 			
@@ -53,10 +54,11 @@ query_posts($args);
 
 			<li class="portfolio-mix col-md-3 <?php echo $slug ?>">
 				<figure class="portfolio-item">
-				<a href="#">
+				<a href="">
 						<?php 
 						if ( has_post_thumbnail() ) {
-							the_post_thumbnail('leadership-thumbnail', array('class' => 'img-responsive'));
+							the_post_thumbnail('post-thumbnail', array('class' => 'img-responsive'));
+							//the_post_thumbnail(array(300, 370), array('class' => 'img-responsive'));
 						} 
 						?>
 						<div class="caption-bg"></div>
@@ -66,7 +68,7 @@ query_posts($args);
 						</p>
 				</a>
 				<div class="portfolio-item-sub-info">
-					<p><?php echo $title; ?></p>					
+					<h4><?php echo $title; ?></h4>					
 				</div>
 				</figure>							
 			</li>
